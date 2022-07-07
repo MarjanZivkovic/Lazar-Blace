@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css" integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mlekara Lazar Blace</title>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="container-fluid hero p-3">
+        <div class="row">
+            <div class="col min-vh-100 text-center text-light position-relative">
+                <h1 class="srb-item main-title text-uppercase display-1" data-aos="fade-left">Mlekara Lazar <br> Blace</h1>
+                <h1 class="eng-item main-title text-uppercase display-1" data-aos="fade-left">Lazar Dairy<br> Blace</h1>
+                <h4 class="srb-item main-title1" data-aos="fade-right" data-aos-delay="800">Zakoračimo u tajne prirode</h4>
+                <h4 class="eng-item main-title1" data-aos="fade-right" data-aos-delay="800">Let's step into the secrets of nature</h4>
+            </div>
+        </div>
+    </section>
+    <!-- Navigation -->
+    <div class="hamburger p-1 d-md-none position-sticky top-0 start-0">
+        <div class="col-1">
+            <button class="btn ham-toggle"><i class="fa-solid fa-bars"></i></button>
+        </div> 
+    </div>
+    <nav class="container-fluid position-sticky top-0 start-0 bg-white" id="main-nav">
+        <div class="row d-none d-md-flex justify-content-around align-items-start p-1">
+            <div class="col-1">
+                <a class="logo-link" href="#"><img src="img/logo.png" alt="logo" width="25"></a>
+            </div>
+            <div class="col-8">
+                <ul class="list-inline d-flex justify-content-between my-0 mx-2 pt-2 text-uppercase">
+                    <li class="list-inline-item more-nav"><a class="srb-item nav-link" href="">O nama</a> <a class="eng-item nav-link" href="">About us</a>
+                        <ul class="list-unstyled d-none hidden-nav position-absolute">
+                            <li><a class="srb-item" href="">Naša priča</a></li>
+                            <li><a class="eng-item" href="">Our story</a></li>
+                            <li><a class="srb-item" href="">Misija i vizija</a></li>
+                            <li><a class="eng-item" href="">Mission and vision</a></li>
+                            <li><a class="srb-item" href="">Politika kvaliteta</a></li>
+                            <li><a class="eng-item" href="">Quality policy</a></li>
+                            <li><a class="srb-item" href="">Farma</a></li>
+                            <li><a class="eng-item" href="">Farm</a></li>
+                            <li><a class="srb-item" href="">Bioelektarna</a></li>
+                            <li><a class="eng-item" href="">Bioelectric power plant</a></li>
+                        </ul> 
+                    </li>
+                    <li class="list-inline-item more-nav"><a class="srb-item nav-link" href="">Naši proizvodi</a> <a class="eng-item nav-link" href="">Our products</a>
+                        <ul class="list-unstyled d-none hidden-nav position-absolute">
+                            <li><a class="srb-item" href="">Mleko | Jogurt</a></li>
+                            <li><a class="eng-item" href="">Milk | Yogurt</a></li>
+                            <li><a class="srb-item" href="">Sirevi</a></li>
+                            <li><a class="eng-item" href="">Cheeses</a></li>
+                            <li><a class="srb-item" href="">Namazi</a></li>
+                            <li><a class="eng-item" href="">Spreads</a></li>
+                            <li><a class="srb-item" href="">Kajmak</a></li>
+                            <li><a class="eng-item" href="">Kajmak</a></li>
+                            <li><a class="srb-item" href="">Robne marke</a></li>
+                            <li><a class="eng-item" href="">Brands</a></li>
+                        </ul> 
+                    </li>
+                    <li class="list-inline-item more-nav"><a class="srb-item nav-link" href="">Poslovanje</a> <a class="eng-item nav-link" href="">Business</a>
+                        <ul class="list-unstyled d-none hidden-nav position-absolute">
+                            <li><a class="srb-item" href="">Maloprodajna mreža</a></li>
+                            <li><a class="eng-item" href="">Retail network</a></li>
+                            <li><a class="srb-item" href="">Partneri u zemlji</a></li>
+                            <li><a class="eng-item" href="">Domestic partners</a></li>
+                            <li><a class="srb-item" href="">Izvoz</a></li>
+                            <li><a class="eng-item" href="">Export</a></li>
+                            <li><a class="srb-item" href="">Zaposlenje</a></li>
+                            <li><a class="eng-item" href="">Employment</a></li>
+                        </ul> 
+                    </li>
+                    <li class="list-inline-item"><a class="srb-item nav-link" href="">Galerija</a> <a class="eng-item nav-link" href="">Gallery</a></li>
+                    <li class="list-inline-item"><a class="srb-item nav-link" href="">Kontakt</a> <a class="eng-item nav-link" href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-1">
+                <select class="form-select language"  name="language">
+                    <option value="srb">SRB</option>
+                    <option value="eng">ENG</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    <!-- side-nav -->
+    <aside class="container-fluid side-nav position-fixed p-4">
+        <div class="row">
+            <div class="col-10">
+                &nbsp;
+            </div>
+            <div class="col-1">
+                <select class="form-select language m-2"  name="language">
+                    <option value="srb">SRB</option>
+                    <option value="eng">ENG</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <ul class="list-unstyled text-uppercase text-center">
+                    <li class="srb-item"><a href="#">Početna</a></li>
+                    <li class="eng-item"><a href="#">Home</a></li>
+                    <li class="srb-item"><a href="#">O nama</a></li>
+                    <li class="eng-item"><a href="#">About us</a></li>
+                    <li class="srb-item"><a href="#">Naši proizvodi</a></li>
+                    <li class="eng-item"><a href="#">Our products</a></li>
+                    <li class="srb-item"><a href="#">Galerija</a></li>
+                    <li class="eng-item"><a href="#">Gallery</a></li>
+                    <li class="srb-item"><a href="#">Kontakt</a></li>
+                    <li class="eng-item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!-- welocme section -->
+    <section class="container welcome">
+        <div class="row">
+            <div class="welcome-text col-md-10 col-xl-6 my-5 mx-1 mx-sm-auto" data-aos="fade-up" data-aos-delay="800">
+                <h2 class="srb-item cursive text-center my-5 h1">Dobro došli u mlekaru Lazar</h2>
+                <h2 class="eng-item cursive text-center my-5 h1">Welcome to dairy Lazar</h2>
+                <p class="srb-item">Dobro došli u mlekaru Lazar Blace! Mi smo jedan od najvećih prerađivača mleka na jugu Srbije. Naši proizvodi nastaju od visokokvalitetnog mleka, proizvedenog na ekološkom području, na obroncima planina Kopaonik i Jastrebac. Svakoga dana od svežeg domaćeg mleka u našoj mlekari nastaju proizvodi vrhunskog kvaliteta, po starim receptima, uz puno ljubavi i posvećenosti. Tajna našeg uspeha je u ekološkoj sredini i apsolutnoj posvećenosti kvalitetu našh proizvoda. Saznajte zašto uživamo puno poverenje potrošača više od dve decenije.</p>
+                <p class="eng-item">Welcome to dairy Lazar Blace, Serbia. We are one of the largest milk processors in the south of Serbia. Our products are made of high-quality milk, produced in an ecological area on the slopes of the Kopaonik and Jastrebac mountains. Every day we create top-quality products from fresh domestic milk according to the old recipes, with a lot of love and dedication. The secret to our success lies in the ecological environment and absolute commitment to the quality of our products. Find out why we are enjoying our customers' full trust for more than two decades.</p>
+                <button class="srb-item btn btn-outline-dark d-block mx-auto"><a class="btn-a" href="#">Više o nama</a></button>
+                <button class="eng-item btn btn-outline-dark d-block mx-auto"><a class="btn-a" href="#">More about us</a></button>
+            </div>
+        </div>
+    </section>
+    <!-- carousel -->
+    <section class="container-fluid my-5 py-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="srb-item cursive text-center my-5 h1" data-aos="fade-right">Naši proizvodi</h2>
+                <h2 class="eng-item cursive text-center my-5 h1" data-aos="fade-right">Our products</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active car-blacki">
+                        <img src="img/blacki.png" alt="blacki sir">
+                        <div class="carousel-caption">
+                          <h5 class="srb-item cursive">Blački sir</h5>
+                          <h5 class="eng-item cursive">Blacki cheese</h5>
+                          <p class="srb-item car-p p-4">Polutvrdi sir parenog testa</p>
+                          <p class="eng-item car-p p-4">Semi-hard steamed cheese</p>
+                          <a href="" class="srb-item btn btn-outline-light">Saznajte više</a>
+                          <a href="" class="eng-item btn btn-outline-light">Learn more</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item car-feta">
+                        <img src="img/feta.png" alt="lazar sir">
+                        <div class="carousel-caption">
+                          <h5 class="srb-item cursive">Lazar sir</h5>
+                          <h5 class="eng-item cursive">Lazar cheese</h5>
+                          <p class="srb-item car-p p-4">Beli sir od ultrafiltriranog mleka</p>
+                          <p class="eng-item car-p p-4">White cheese of ultrafiltered milk</p>
+                          <a href="" class="srb-item btn btn-outline-light">Saznajte više</a>
+                          <a href="" class="eng-item btn btn-outline-light">Learn more</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item car-kajmak">
+                        <img src="img/kajmak.png" alt="kajmak">
+                        <div class="carousel-caption">
+                          <h5 class="srb-item cursive">Kajmak</h5>
+                          <h5 class="eng-item cursive">Kajmak</h5>
+                          <p class="srb-item car-p p-4">Mladi kajmak mlekare Lazar</p>
+                          <p class="eng-item car-p p-4">Lazar young kajmak</p>
+                          <a href="" class="srb-item btn btn-outline-light">Saznajte više</a>
+                          <a href="" class="eng-item btn btn-outline-light">Learn more</a>
+                        </div>
+                      </div>
+                      <div class="carousel-item car-pup">
+                        <img src="img/pup.png" alt="pup">
+                        <div class="carousel-caption">
+                          <h5 class="srb-item cursive">Paprika u pavlaci</h5>
+                          <h5 class="eng-item cursive">Pepper in sour cream</h5>
+                          <p class="srb-item car-p p-4">Namaz sa seckanom ili celom paprikom</p>
+                          <p class="eng-item car-p p-4">Spread with chopped or whole pepper</p>
+                          <a href="" class="srb-item btn btn-outline-light">Saznajte više</a>
+                          <a href="" class="eng-item btn btn-outline-light">Learn more</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- why milk -->
+    <section class="container py-5 why-milk">
+        <div class="row">
+            <div class="col">
+                <h2 class="srb-item cursive text-center my-5 h1" data-aos="fade-right">Zašto piti mleko</h2>
+                <h2 class="eng-item cursive text-center my-5 h1" data-aos="fade-right">Why milk</h2>
+            </div>
+        </div>
+        <div class="row text-center py-5">
+            <div class="col-12 col-xl-6">
+                <video class="img-thumbnail" src="video/milk.mp4" autoplay loop muted></video>
+            </div>
+            <div class="col-12 col-xl-6 mt-5 mt-xl-0">
+                <div class="row justify-content-around">
+                    <div class="col-5 shadow rounded p-2 mx-2" data-aos="flip-left" data-aos-delay="1000">
+                        <p class="srb-item h5">Prirodno jača imunitet</p>
+                        <p class="eng-item h5">Naturally strengthens immunity</p>
+                        <i class="fa-solid fa-user-shield fa-5x p-2 text-muted"></i>
+                    </div>
+                    <div class="col-5 shadow rounded p-2 mx-2" data-aos="flip-left" data-aos-delay="1200">
+                        <p class="srb-item h5">Pomaže zdrav razvoj kostiju</p>
+                        <p class="eng-item h5">Helps healthy bone development</p>
+                        <i class="fa-solid fa-bone fa-5x p-2 text-muted"></i>
+                    </div>
+                </div>
+                <div class="row justify-content-around mt-3">
+                    <div class="col-5 shadow rounded p-2 mx-2" data-aos="flip-left" data-aos-delay="1400">
+                        <p class="srb-item h5">Smanjuje rizik od srčanih oboljenja</p>
+                        <p class="eng-item h5">Reduces the risk of heart disease</p>
+                        <i class="fa-solid fa-heart-pulse fa-5x p-2 text-muted"></i>
+                    </div>
+                    <div class="col-5 shadow rounded p-2 mx-2" data-aos="flip-left" data-aos-delay="1600">
+                        <p class="srb-item h5">Pomaže redukovanju telesne težine</p>
+                        <p class="eng-item h5">Helps to reduce body weight</p>
+                        <i class="fa-solid fa-weight-scale fa-5x p-2 text-muted"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- in numbers -->
+    <section class="container text-center my-5 in-numbers">
+        <div class="row">
+            <div class="col">
+                <h2 class="srb-item cursive text-center my-5 h1" data-aos="fade-right">Lazar u brojkama</h2>
+                <h2 class="eng-item cursive text-center my-5 h1" data-aos="fade-right">Lazar in numbers</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-xl-none">
+                <button class="srb-item btn btn-outline-dark start-count">Počni brojanje</button>
+                <button class="eng-item btn btn-outline-dark start-count">Start counting</button>
+            </div>
+        </div>
+        <div class="row row in-numbers-1 mt-5 py-4 d-flex justify-content-between">
+            <div class="col-md-6 col-xl-4">
+                <p class="srb-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-cheese"></i> &nbsp;&nbsp; Preradimo</p>
+                <p class="eng-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-cheese"></i> &nbsp;&nbsp; We process</p>
+                <p class="big-num m-xl-0 p-xl-0" data-targetNum="85000">0</p>
+                <p class="srb-item fw-bold mb-5 pb-5">litara mleka dnevno</p>
+                <p class="eng-item fw-bold mb-5 pb-5">liters of milk per day</p>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <p class="srb-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-handshake"></i>&nbsp;&nbsp; Sarađujemo sa</p>
+                <p class="eng-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-handshake"></i>&nbsp;&nbsp; We cooperate with</p>
+                <p class="big-num m-xl-0 p-xl-0" data-targetNum="1500">0</p>
+                <p class="srb-item fw-bold mb-5 pb-5">kooperanata iz 4 okruga</p>
+                <p class="eng-item fw-bold mb-5 pb-5">partners from 4 counties</p>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <p class="srb-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-cow"></i>&nbsp;&nbsp; Gajimo</p>
+                <p class="eng-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-cow"></i>&nbsp;&nbsp; We raise</p>
+                <p class="big-num m-xl-0 p-xl-0" data-targetNum="1300">0</p>
+                <p class="srb-item fw-bold mb-5 pb-5">sopstvenih muznih krava</p>
+                <p class="eng-item fw-bold mb-5 pb-5">own dairy cows</p>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <p class="srb-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-tractor"></i>&nbsp;&nbsp; Obrađujemo</p>
+                <p class="eng-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-tractor"></i>&nbsp;&nbsp; We cultivate</p>
+                <p class="big-num m-xl-0 p-xl-0" data-targetNum="1000">0</p>
+                <p class="srb-item fw-bold mb-5 pb-5">hektara plodne zemlje</p>
+                <p class="eng-item fw-bold mb-5 pb-5">hectares of fertile land</p>
+            </div> 
+            <div class="col-md-6 col-xl-4">
+                <p class="srb-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-user-tie"></i>&nbsp;&nbsp; Zapošljavamo</p>
+                <p class="eng-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-user-tie"></i>&nbsp;&nbsp; We employ</p>
+                <p class="big-num m-xl-0 p-xl-0" data-targetNum="220">0</p>
+                <p class="srb-item fw-bold mb-5 pb-5">stručnih ljudi</p>
+                <p class="eng-item fw-bold mb-5 pb-5">competent employees</p>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <p class="srb-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-industry"></i>&nbsp;&nbsp; Proizvodimo</p>
+                <p class="eng-item h4 fw-bold m-xl-0 p-xl-0"><i class="fa-solid fa-industry"></i>&nbsp;&nbsp; We produce</p>
+                <p class="big-num m-xl-0 p-xl-0" data-targetNum="150">0</p>
+                <p class="srb-item fw-bold mb-5 pb-5">kvalitetnih proizvoda</p>
+                <p class="eng-item fw-bold mb-5 pb-5">high-quality products</p>
+            </div>
+        </div>
+    </section>
+    <!-- did you know -->
+    <section class="container">
+        <div class="row mb-5 pb-5">
+            <div class="col-md-8 col-xl-6 py-5 mx-auto">
+                <div class="accordion py-5" id="accordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <span class="srb-item">Da li ste znali?</span> 
+                          <span class="eng-item">Did you know?</span> 
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                          <p class="srb-item">Kompanija <strong>Lazar Blace D.O.O.</strong> više od polovine ukupne proizvodnje plasira na inostrana tržišta. Uz pomoć naših distributera, proizvodi kopmanije Lazar su prisutni u svim zemljama <span class="green">bivše Jugoslavije</span>. Veliki deo našeg izvoza odlazi u zemlje <span class="green">EU</span>, kao što su Nemačka, Austrija, Holandija, Grčka. Naši proizvodi našli su put i do veoma probirljivih tržišta, kao što su zemlje <span class="green">Carinskog saveza</span>, ali i <span class="green">SAD</span>. Od nedavno kompanija Lazar je prisutna i u zemljama <span class="green">Bliskog istoka</span>, pre svega Jordana.</p>
+                          <p class="eng-item">More than half of the total production of <strong>the Lazar Blace company</strong> is being placed on foreign markets. With the help of our distributors, Lazar's products are present in all countries of the <span class="green">former Yugoslavia</span>. A big portion of our export goes to <span class="green">EU countries</span>, such as Germany, Austria, the Netherlands, Greece... Our products found their way to very demanding markets, such as the countries of the <span class="green">Eurasian Customs Union</span>, as well as the <span class="green">USA</span>. Recently, the Lazar company has also been present in the countries of the <span class="green">Middle East</span>, primarily Jordan.</p>
+                          <p class="srb-item">Sve ovo ne bi bilo moguće bez poštovanja strogih propisa i primene najnovijih standarda kvaliteta proizvodnje. Lazar za Vas primenjuje <span class="green">ISO 22000</span> - Sistem menadžmenta bezbednošću hrane i International Food Standard - <span class="green">IFS</span>.</p>
+                          <p class="eng-item">None of this would've been possible without the accordance with strict regulations and the application of the latest production quality standards. For you, Lazar applies <span class="green">ISO 22000</span> - Food Safety Management System and  International Food Standard - <span class="green">IFS</span>.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>
+    </section>
+    <!-- media -->
+    <section class="container py-5 my-5 media-coverage">
+        <div class="row py-5">
+            <div class="col">
+                <h2 class="srb-item cursive text-center my-5 h1" data-aos="fade-right">Lazar u medijima</h2>
+                <h2 class="eng-item cursive text-center my-5 h1" data-aos="fade-right">Lazar in the media</h2>
+            </div>
+        </div>
+        <div class="row py-5 d-flex justify-content-around align-items-center text-center">
+            <div class="col-md-5">
+                <figure>
+                    <blockquote class="blockquote">
+                      <p class="srb-item">"Ovo divno izgleda, drago mi je što imamo kvalitetnu robu koju izvozimo. Fasciniran sam paletom proizvoda."</p>
+                      <p class="eng-item">"This looks splendid, I'm glad we have quality goods to export. I'm fascinated by the assortment of products."</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Aleksandar Vučić<cite class="srb-item" title="Source Title">&nbsp;&nbsp;&nbsp; Predsednik Srbije u poseti našoj mlekari</cite>
+                                        <cite class="eng-item" title="Source Title">&nbsp;&nbsp;&nbsp; The President of the Republic of Serbia visiting our dairy</cite>
+                    </figcaption>
+                  </figure>
+            </div>
+            <div class="col-md-5">
+                <img class="img-thumbnail" src="img/vucic.jpg" alt="Vucic u poseti">
+            </div>
+        </div>
+        <div class="row py-5 mt-5 d-flex justify-content-around align-items-center">
+            <div class="d-none d-md-block col-md-5 col-xl-3 shadow rounded" data-aos="zoom-in-right" data-aos-delay="1000">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WLVKDZR8rW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-5 col-xl-3 shadow rounded" data-aos="zoom-in-up" data-aos-delay="1200">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3zO4IuDAuHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-3 d-none d-xl-block shadow rounded" data-aos="zoom-in-left" data-aos-delay="1400">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kAcTjY2OoZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- map -->
+    <section class="container pb-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="srb-item cursive text-center my-5 h1" data-aos="fade-right">Pronađite nas u Blacu</h2>
+                <h2 class="eng-item cursive text-center my-5 h1" data-aos="fade-right">Find us in Blace</h2>
+            </div>
+        </div>
+        <div class="row py-5 my-5 map-of-blace d-flex justify-content-between">
+            <div class="col-md-8 col-xl-6 flags mx-auto my-2" data-aos="fade-right">
+                <p class="srb-item px-4 py-5 display-6 text-light">Dobro došli!</p>
+                <p class="eng-item px-4 py-5 display-6 text-light">Welcome!</p>
+            </div>
+            <div class="col-md-8 col-xl-6 mx-auto px-0 my-2 map" data-aos="fade-left">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="container-fluid py-5 my-5">
+        <br> <br> <hr>
+        <div class="row d-flex justify-content-around justify-content-lg-evenly align-items-stretch py-5 px-1 text-muted">
+            <div class="text-center text-md-start col-md-5 col-lg-3">
+                <h3 class="srb-item py-2">Mlekara Lazar d.o.o.</h3>
+                <h3 class="eng-item py-2">Lazar Dairy llc</h3>
+                <p class="srb-item"><i class="fa-solid fa-earth-europe px-1"></i> 18420 Blace, Srbija</p>
+                <p class="eng-item"><i class="fa-solid fa-earth-europe px-1"></i> 18420 Blace, Serbia</p>
+                <p class="srb-item"><i class="fa-solid fa-location-dot px-1"></i> Kralja Petra I  br.6</p>
+                <p class="eng-item"><i class="fa-solid fa-location-dot px-1"></i> King Peter I  no.6</p>
+                <p class="srb-item"><i class="fa-solid fa-phone px-1"></i> 027/370020</p>
+                <p class="eng-item"><i class="fa-solid fa-phone px-1"></i> +38127370020</p>
+                <p class="srb-item"><i class="fa-solid fa-phone px-1"></i> 027/370021</p>
+                <p class="eng-item"><i class="fa-solid fa-phone px-1"></i> +38127370021</p>
+                <p><i class="fa-solid fa-at px-1"></i> mmlazar@beotel.rs</p>
+            </div>
+            <div class="d-none d-md-block col-md-5 col-lg-3">
+                <img class="footer-logo" src="img/logo.png" alt="logo" width="200">
+            </div>
+            <div class="col-md-12 col-lg-3 text-center text-lg-end d-flex flex-column justify-content-between">
+                <p><a href=""><i class="fa-brands fa-facebook-square fa-3x px-1"></i></a> <a href=""><i class="fa-brands fa-instagram-square fa-3x px-1"></i></a> </p>
+                <div>
+                    <p class="srb-item pt-4">Politika privatnosti <br>
+                    &copy; <span class="current-year"></span> Mlekara Lazar doo - Sva prava zadržana </p>
+                    <p class="eng-item pt-4">Privacy Policy <br>
+                    &copy; <span class="current-year"></span> Lazar Dairy llc - All rights reserved </p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center text-muted"><small title="zivkovicmarjan@yahoo.com">Design by: Marjan</small></div>
+    </footer>
+    <!-- go to top btn -->
+    <div class="go-to-top position-fixed p-2"> <a href="#"><i class="fa-solid fa-chevron-up"></i></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js" integrity="sha512-Hqe3s+yLpqaBbXM6VA0cnj/T56ii5YjNrMT9v+us11Q81L0wzUG0jEMNECtugqNu2Uq5MSttCg0p4KK0kCPVaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 200,
+            duration: 1500
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
