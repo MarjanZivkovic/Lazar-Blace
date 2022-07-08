@@ -11,6 +11,7 @@ const mainMarker = L.marker([43.2959, 21.2965]).addTo(myMap)
 mainMarker.bindTooltip(`<img src="img/logo.png" alt="logo" width="30"> <br> <b>Mlekara Lazar d.o.o.</b> <br> Kralja Petra I  br.6 <br> 18420 Blace <hr>
                         Proizvodnja <br> Uprava <br> Magacin`)
 
+
 //Go to top
 const goToTopBtn = document.querySelector(".go-to-top")  
 
@@ -54,7 +55,6 @@ for (let i of currentYear) {
 //Counting numbers
 const countNumbers = document.querySelectorAll(".big-num")
 const bigNums1 = document.querySelector(".in-numbers-1")
-const countBtn = document.querySelector(".start-count")
 
 function updateNumbers(){
     countNumbers.forEach((number) =>{
@@ -72,7 +72,7 @@ function updateNumbers(){
 
         if ( currentNum < targets ){
             number.innerText = Math.ceil( currentNum + increment )
-            setTimeout( updateNumbers , 5)
+            setTimeout( updateNumbers , 2)
         } else {
             number.innerText = targets
         }
@@ -80,10 +80,7 @@ function updateNumbers(){
 }
 
 bigNums1.addEventListener("mouseenter", updateNumbers)
-countBtn.addEventListener("click", () => {
-    countNumbers.forEach((num) => num.innerText = 0)
-    setTimeout(updateNumbers, 500 ) 
-})
+
 
 //Select language
 const srbItems = document.querySelectorAll(".srb-item")
@@ -94,50 +91,44 @@ engItems.forEach((item) =>{
     item.setAttribute("lang" , "en")
 })
 
-function removeEnglish(){
+function showSerbian(){
     engItems.forEach((item) =>{
         item.classList.add("d-none")
     })
-}
-removeEnglish()
-
-function removeSerbian(){
     srbItems.forEach((item) =>{
-        item.classList.add("d-none")
-    })
-}
-
-function addEnglish(){
-    engItems.forEach((item) =>{
         item.classList.remove("d-none")
     })
 }
 
-function addSerbian(){
+function showEnglish(){
     srbItems.forEach((item) =>{
+        item.classList.add("d-none")
+    })
+    engItems.forEach((item) =>{
         item.classList.remove("d-none")
     })
 }
 
 selectButtons.forEach((button) => {
     button.addEventListener("change", () =>{
-        if ( button.value == "srb" ){
-            removeEnglish()
-            addSerbian()
-            localStorage.setItem('chosen-lang', button.value)
+        if ( button.value == "eng" ){
+            showEnglish()
+            localStorage.setItem("chosen-lang", button.value)
+            button.children[1].selected = true
         } else {
-            removeSerbian()
-            addEnglish()
-            localStorage.setItem('chosen-lang', button.value )
+            showSerbian()
+            localStorage.setItem("chosen-lang", button.value )
         }
     })
 })
+
 //getting lnguage from LS
 let chosenLang = localStorage.getItem("chosen-lang")
-if( chosenLang === "srb"){
-    removeEnglish()
-    addSerbian
+if( chosenLang === "eng"){
+    showEnglish()
+    selectButtons.forEach((button) =>{
+        button.children[1].selected = true
+    })
 } else {
-    removeSerbian()
-    addEnglish()
+    showSerbian()
 }
