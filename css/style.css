@@ -12,7 +12,7 @@ html{
 }
 body{
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden!important;
     scroll-behavior: smooth;
     font-family: Nunito, sans-serif;
 }
@@ -128,9 +128,6 @@ video{
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
-.btn-a:hover, .btn-a:active{
-    color: #fff;
-}
 /*carousel*/
 .carousel-item{
     min-height: 90vh;
@@ -145,7 +142,7 @@ video{
     max-width: 300px;
     position: absolute;
     top: 5%;
-    left: 0;
+    left: 10%;
     transform: rotate(-5deg);
 }
 .carousel-caption{
@@ -185,16 +182,14 @@ video{
 /*media*/
 .media-coverage iframe{
     width: 100%;
+    min-height: 300px;
 }
 /*map*/
-.map-of-blace{
-    height: 380px;
-}
 .flags{
     background: url(../img/lazar-ulaz.jpg) no-repeat center center / cover;
 }
 #map{
-    height: 380px;
+    height: 200px;
 }
 /*did you know*/
 #accordion button{
@@ -274,6 +269,9 @@ footer a:hover{
         max-width: 450px;
         top: 20%;
     }
+    #map{
+        height: 380px;
+    }
 }
 @media ( min-width: 992px ){
     .carousel-item img{
@@ -289,5 +287,13 @@ footer a:hover{
     }
     .footer-logo{
         margin-left: 5rem;
+    }
+}
+@media ( max-width: 992px ) and (orientation: landscape){
+    .hero .col{
+        height: 150vh!important;
+    }
+    .carousel-item{
+        min-height: 150vh;
     }
 }
