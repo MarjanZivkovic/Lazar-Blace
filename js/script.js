@@ -3,7 +3,7 @@ const myMap = L.map("map",{
     attributionControl: false
 })
 
-myMap.setView([43.2957, 21.2863], 15)
+myMap.setView([43.2955, 21.2900], 15)
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(myMap);
 
