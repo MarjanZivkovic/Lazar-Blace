@@ -55,6 +55,7 @@ for (let i of currentYear) {
 //Counting numbers
 const countNumbers = document.querySelectorAll(".big-num")
 const bigNums1 = document.querySelector(".in-numbers-1")
+const clickDownText = document.querySelectorAll(".click-text") 
 
 function updateNumbers(){
     countNumbers.forEach((number) =>{
@@ -79,7 +80,10 @@ function updateNumbers(){
     })
 }
 
-bigNums1.addEventListener("mouseenter", updateNumbers)
+bigNums1.addEventListener("mouseenter", () => {
+    updateNumbers()
+    clickDownText.forEach((text) => text.remove())
+})
 
 
 //Select language
