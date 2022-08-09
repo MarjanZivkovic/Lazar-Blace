@@ -94,7 +94,7 @@ video{
     top: 0;
     left: 0;
     background-color: rgba(255,255,255,0.9);
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     font-weight: bold;
     letter-spacing: 3px;
@@ -123,7 +123,7 @@ video{
 }
 .welcome-text{
     padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -178,6 +178,21 @@ video{
     font-weight: bold;
     line-height: 5.5rem;
 }
+.click-text{
+    animation: spread 4s ease-in-out infinite;
+}
+@keyframes spread{
+    0%{
+    
+    }
+    50%{
+        letter-spacing: 4px;
+    }
+    100%{
+    
+    }
+}
+
 /*media*/
 .media-coverage iframe{
     width: 100%;
