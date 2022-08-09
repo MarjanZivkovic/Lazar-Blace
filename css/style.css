@@ -45,9 +45,7 @@ video{
 }
 /*hero*/
 .hero{
-    background: url(../img/hero.jpg) no-repeat;
-    background-position: -6rem center;
-    background-size: cover;
+    background: url(../img/hero.jpg) no-repeat right bottom / cover;
 }
 .main-title{
     position: absolute;
@@ -96,7 +94,7 @@ video{
     top: 0;
     left: 0;
     background-color: rgba(255,255,255,0.9);
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
     font-weight: bold;
     letter-spacing: 3px;
@@ -193,6 +191,10 @@ video{
     height: 200px;
 }
 /*did you know*/
+.dyk-container{
+    min-height: 100vh;
+    background: url(../img/cheeses.jpg) no-repeat left top / cover;
+}
 #accordion button{
     font-size: 2rem;
     font-weight: bold;
