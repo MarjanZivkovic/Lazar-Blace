@@ -43,6 +43,9 @@ video{
     color: var(--green-lazar);
     font-weight: bold;
 }
+.container{
+    overflow: hidden;
+}
 /*hero*/
 .hero{
     background: url(../img/hero.jpg) no-repeat right bottom / cover;
